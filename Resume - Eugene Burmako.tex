@@ -25,7 +25,7 @@
 PhD, Computer Science\\
 +1-631-464-1469\\
 \href{mailto:eugene.burmako@gmail.com}{eugene.burmako@gmail.com}\\
-Mountain View, CA\\
+San Francisco, CA\\
 US Permanent Resident\\
 \end{minipage}
 
@@ -33,11 +33,17 @@ US Permanent Resident\\
 
 \section{EXPERTISE}
 
-Programming languages,\\
 Compilers,\\
+Programming languages,\\
 Developer tools.
 
 \section{HIGHLIGHTS}
+
+Cofounded and championed Swift MLIR, a toolchain that compiles ML programs written
+in Swift into MLIR. Building on top of frontend metaprogramming via Swift quasiquotes
+and backend metaprogramming via Swift Intermediate Language, we delivered
+two prototypes that can compile small computational kernels and machine learning
+models written in Swift to a combination of standard and XLA HLO dialects of MLIR.
 
 Created Rsc, an experimental Scala compiler focused on compilation speed. Through outlining - really
 quick computation of type signatures - we've been able to extract additional parallelism from Scala
@@ -66,6 +72,51 @@ and the 3rd top contributor to the Scala 2.11 release.
 
 \section{PROJECTS}
 
+\textbf{\href{http://go/swift-mlir}{Swift MLIR}}. Having learned about MLIR,
+I've been looking for opportunities to integrate it into Swift, and in May 2019,
+I found a plausible plan of attack and proceeded to work on what has become two
+distinct prototypes - one based on Swift quasiquotes and another one based on Swift
+Intermediate Language.
+
+\begin{itemize} \itemsep -2pt
+\item Proposed a design and a roadmap for integration between Swift and MLIR,
+broke it down into bite-sized work items, evolved as necessary to adjust for
+intermediate research findings and changes in the MLIR landscape.
+\item Together with Alex Suhan, worked on the first prototype of Swift MLIR,
+splitting the work between frontend (mostly myself) and backend (mostly Alex).
+\item Explored lightweight modular staging, implemented virtualized if and for,
+inspired by Scala virtualized, in the Swift compiler.
+\item Implemented quasiquotes for the majority of Swift expressions
+($\sim$2kloc compiler patch, $\sim$3kloc libQuote library, $\sim$3kloc libQuote tests).
+\item Together with Adam Paszke, kickstarted libSIL - a Swift-based data model
+and parser for Swift Intermediate Language.
+\item Implemented the SIL dialect of MLIR and relevant components of a Swift
+compilation pipeline that enable ingesting the intermediate representation of
+the Swift compiler into the MLIR ecosystem.
+\item Designed a prototype programming model and corresponding MLIR compiler
+passes for the second prototype to compile small computational kernels and
+machine learning models written in Swift to a combination of standard and
+XLA HLO dialects of MLIR.
+\end{itemize}
+
+\textbf{\href{https://github.com/tensorflow/swift}{Swift for TensorFlow}}.
+In Feb 2019, I joined the Swift for TensorFlow team at Google Brain to help build
+a next-generation platform for machine learning founded by Chris Lattner et al.
+During my time at the Swift for TensorFlow team, I was mostly focused on Swift MLIR,
+but also made a few smaller contributions to Swift tooling and internal use cases
+for our product.
+
+\begin{itemize} \itemsep -2pt
+\item Documented the state of internal tooling landscape for Swift for TensorFlow,
+met with partner teams, proposed a roadmap for future work.
+\item Investigated compilation performance of Swift for TensorFlow targets in
+the Google monorepo, identified and documented areas of improvement.
+\item Performed the initial investigation into SourceKit, implemented an MVP of
+resolving cross-target references in the Google monorepo.
+\item Figured out and documented how to enable Python interop and TPU support in
+Swift for TensorFlow targets in the Google monorepo.
+\end{itemize}
+
 \textbf{\href{https://github.com/twitter/rsc}{Rsc}}. In Aug 2017, I started developing Rsc,
 an experimental Scala compiler focused on compilation speed. Shortly after its inception,
 the project got internal funding at Twitter. At the moment, Rsc is focused on outlining - really
@@ -77,7 +128,7 @@ speedups on powerful hardware.
 \item Owned internal and external roadmaps of Rsc, ensuring continuous delivery
 on commitments in the face of significant uncertainty.
 \item Worked together with partners within Advanced Scala Tools and Build teams towards
-seamless integration of Rsc into the Twitter toolchain and developer workflow.
+integration of Rsc into the Twitter toolchain and developer workflow.
 \item Co-designed and implemented Rsc outlining, achieving significant coverage of Twitter internal
 codebase.
 \item Co-designed and prototyped RscCompat, an automated code rewrite that transforms Scala code
@@ -210,12 +261,21 @@ a JIT compiler that speeds up execution:
 
 \emph{Google}\\
 Mountain View, CA \\
+Staff Software Engineer, Tech Lead / Manager \\
+% 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States of America
+Feb 2020 - present\\
+% 18 Feb 2020 - present
+Activities: Our project exists at the intersection of Machine Learning and hardware,
+but is still under wraps so we can't share much more detail.
+
+\emph{Google}\\
+Mountain View, CA \\
 Staff Software Engineer \\
-% 1965 Charleston Road, Mountain View, CA 94043, United States of America
-Feb 2019 - present\\
-% 11 Feb 2019 - present
+% 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States of America
+Feb 2019 - Feb 2020\\
+% 11 Feb 2019 - 17 Feb 2020
 Activities: Working on Swift for TensorFlow - a new way to develop machine learning models which
-gives the power of TensorFlow directly integrated into the Swift programming language.
+gives the power of TensorFlow directly integrated into Swift.
 
 \emph{Twitter}\\
 San Francisco, CA \\
@@ -291,6 +351,9 @@ Degree: Specialist in Computer science \\
 \section{TALKS}
 
 \begin{enumerate} \itemsep -2pt
+\item \href{https://www.meetup.com/Swift-for-TensorFlow/events/262262835/}{E. Burmako, A. Suhan ``Swift as syntactic sugar for MLIR'', Swift for TensorFlow meetup, San Francisco, September 9, 2019}
+\item \href{https://docs.google.com/presentation/d/1cJQPJMTa7IJqCpJf4WpVM_UpiSivsmfnsMbBmodNh3M/edit#slide=id.g5dc464bf19_0_98}{E. Burmako, A. Suhan ``Swift as syntactic sugar for MLIR'', Google ML Languages Summit, San Francisco, August 13, 2019}
+\item \href{https://docs.google.com/presentation/d/1WOR288YE4-qgjtPtnb7taK0KrhTFTfMf_e-Vvv29vbE/edit}{E. Burmako ``Swift for TensorFlow: A new way of doing machine learning'', Google Developers ML Summit, Tokyo, July 11, 2019}
 \item \href{https://github.com/twitter/rsc/raw/master/docs/2018-11-15-ScaleByTheBay.pdf}{E. Burmako ``Towards Parallelizing Scala Compilations'', Scale by the Bay, San Francisco, November 15, 2018}
 \item \href{https://2018.splashcon.org/track/meta-2018#About}{E. Burmako ``SemanticDB: a Common Data Model for Scala Developer Tools'', Workshop on Meta-Programming Techniques and Reflection, Boston, November 5, 2018}
 \item \href{https://conf.researchr.org/track/scala-2018/scala-2018-papers#About}{E. Burmako ``SemanticDB: a Common Data Model for Scala Developer Tools'', Scala Symposium, September 28, 2018}
